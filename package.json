@@ -1,0 +1,10 @@
+{
+  "name": "codehighlight",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "author": "Aliaksei Maniuk",
+  "license": "MIT",
+  "dependencies": {
+   }
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <style>
+        .codeTextarea {
+            width: 100%;
+        }
+        
+        .option-block {
+            float: left;
+            margin-right: 10px;
+        }
+        
+        .option-block .option-block-title {
+            margin-bottom: 5px;
+        }
+        
+        .clear {
+            clear: both;
+        }
+        
+        .transform-options {
+            margin-bottom: 10px;
+        }
+        
+        .code-block {
+            margin-bottom: 10px;
+        }
+        
+        .result-preview pre{
+            max-height: 200px;
+        }
+    </style>
+    <div class="main">
+        <div class="code-block">
+            <div>Source code </div>
+            <textarea id="sourceCode" class="codeTextarea" rows="15"></textarea>
+        </div>
+        <div class="code-block">
+            <div>Highlighted code </div>
+            <textarea id="highlightedCode" class="codeTextarea" rows="15"></textarea>
+        </div>
+
+        <div class="transform-options">
+            <div class="option-block">
+                <div class="option-block-title">Select language:</div>
+                <select class="prism-language">
+                    <option value="markup">Markup</option>
+                    <option value="css">Css</option>
+                    <option value="javascript">Javascript</option>
+                    <option value="clike">Clike</option>
+                    <option value="aspnet">ASP.NET</option>
+                    <option value="c">C</option>
+                    <option value="csharp">C#</option>
+                    <option value="cpp">C++</option>
+                    <option value="fsharp">F#</option>
+                    <option value="gherkin">Gherkin</option>
+                    <option value="git">Git</option>
+                    <option value="go">Go</option>
+                    <option value="groovy">Groovy</option>
+                    <option value="java">Java</option>
+                    <option value="json">JSON</option>
+                    <option value="less">Less</option>
+                    <option value="matlab">MATLAB</option>
+                    <option value="perl">Perl</option>
+                    <option value="php">PHP</option>
+                    <option value="powershell">PowerShell</option>
+                    <option value="python">Python</option>
+                    <option value="ruby">Ruby</option>
+                    <option value="sass">Sass</option>
+                    <option value="scala">Scala</option>
+                    <option value="sql">SQL</option>
+                    <option value="swift">Swift</option>
+                    <option value="typescript">TypeScript</option>
+                </select>
+            </div>
+            <div class="option-block">
+                <div class="option-block-title">Select theme:</div>
+                <select class="prism-theme">
+                    <option value="default">Default</option>
+                    <option value="prismVs">prism-VS</option>
+                    <option value="prismOkaidia">prism-okaidia</option>
+                </select>
+            </div>
+            <div class="option-block">
+                <div class="option-block-title">Include style:</div>
+                <input type="checkbox" id="includeStyleCheckbox" checked> 
+            </div>
+            <div class="clear"></div>
+        </div>
+        <button id="transformButton">Transform</button>
+        <div class="result-preview"></div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="prism.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
