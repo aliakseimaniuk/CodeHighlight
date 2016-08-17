@@ -15,20 +15,13 @@
             var style = '<style>' + themes[theme] + '</style>';
             var result = '';
 
-            if ($('#includeStyleCheckbox').is(':checked')) {
-                result =
-                    '<!-- Generated code by prismjs -->' +
-                    style +
-                    '<pre class="language-javascript">' +
-                    html +
-                    '</pre><!-- Generated code by prismjs -->';
+            var output = '<!-- Generated code -->{{style}}<pre class="language-{{language}}">{{html}}</pre><!-- Generated code -->';
 
+            if ($('#includeStyleCheckbox').is(':checked')) {
+                result = output.replace('{{style}}', style).replace('{{language}}', language).replace('{{html}}',html);
                 $('.result-preview').html(result);
             } else {
-                result =
-                    '<!-- Generated code by prismjs --><pre class="language-javascript">' +
-                    html +
-                    '</pre><!-- Generated code by prismjs -->';
+                result = output.replace('{{style}}', '').replace('{{language}}', language).replace('{{html}}',html);
 
                 $('.result-preview').html('');
             }
